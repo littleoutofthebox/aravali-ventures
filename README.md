@@ -1,6 +1,6 @@
 # Aravali Ventures
 
-Website for [aravali.ventures](https://aravali.ventures), built with [Astro](https://astro.build) and deployed on Vercel.
+Website for [aravali.ventures](https://aravali.ventures): the Udaipur Investor Summit by Aravali Ventures, built with [Astro](https://astro.build) and deployed on Vercel.
 
 ## Develop
 
@@ -12,8 +12,8 @@ npm run build    # outputs to dist/
 
 ## Edit content
 
-All page copy (tagline, focus areas, principles, contact email) lives at the top of `src/pages/index.astro`.
-Colors and fonts are in `src/layouts/Base.astro`.
+Page markup lives in `src/content/summit.html` (exported from the "Udaipur Investor Summit" design in Claude); images are in `public/images/`.
+Global styles, phone-width overrides and SEO tags are in `src/layouts/Base.astro`; the Founders/Investors/Partners toggle and the invitation form (opens an email to contact@aravali.ventures) are scripted in `src/pages/index.astro`.
 
 ## Deploy
 

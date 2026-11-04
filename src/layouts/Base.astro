@@ -4,10 +4,11 @@ interface Props {
   description?: string;
 }
 const {
-  title = 'Aravali Ventures',
-  description = 'Aravali Ventures builds and backs enduring businesses rooted in India.',
+  title = 'Udaipur Investor Summit · Aravali Ventures',
+  description = 'Udaipur Investor Summit by Aravali Ventures. Innovation meets investment: one evening where founders meet the investors who can back them. 19 November 2026, Holymont Resort, Udaipur.',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/images/4e49ac4d5af10c709084df905cc2e0b8.jpg', Astro.site);
 ---
 
 <!doctype html>
@@ -18,18 +19,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/735d5f722b7251bdb85d64e249e1b5aa.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="theme-color" content="#f4efe6" />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0B0B0B" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <slot />
@@ -37,57 +37,41 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 </html>
 
 <style is:global>
-  :root {
-    --bg: #f4efe6;
-    --surface: #ebe3d5;
-    --ink: #2b2620;
-    --muted: #6b6155;
-    --accent: #b5652b;
-    --line: #d8cdbb;
-    --max: 1120px;
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: #0B0B0B; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+  a { color: #F4EFE7; }
+  a:hover { color: #E0474B; }
+  ::selection { background: #C8242A; color: #FFFFFF; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  .aud-pane { display: contents; }
+
+  .aud-tab, .aud-seg {
+    min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px;
+    background: transparent; color: #0B0B0B; font: 500 13px Montserrat, sans-serif; cursor: pointer;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #1c1915;
-      --surface: #25211c;
-      --ink: #efe8dc;
-      --muted: #a89c8c;
-      --accent: #d98a4e;
-      --line: #3a342c;
-    }
+  .aud-seg { flex: 1 1 100px; padding: 0; }
+  .aud-tab[aria-selected='true'], .aud-seg[aria-pressed='true'] {
+    background: #0B0B0B; color: #FFFFFF; font-weight: 600;
   }
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+  @media (max-width: 760px) {
+    [style*='grid-template-columns: repeat(auto-fit, minmax('] { grid-template-columns: 1fr !important; }
+    [style*='padding: 56px'] { padding: 32px 20px !important; }
+    [style*='padding: 48px 56px'] { padding: 32px 20px 24px !important; }
+    [style*='padding: 40px 48px'] { padding: 24px 20px 28px !important; }
+    [style*='padding: 36px'] { padding: 24px 18px !important; }
+    [style*='padding: 26px 40px'] { padding: 22px 20px !important; }
+    [style*='repeat(4, minmax(0, 1fr))'], [style*='repeat(3, minmax(0, 1fr))'] { grid-template-columns: 1fr !important; grid-auto-rows: 240px !important; }
+    [style*='repeat(4, minmax(0, 1fr))'] > *, [style*='repeat(3, minmax(0, 1fr))'] > * { grid-column: auto !important; grid-row: auto !important; }
+    #venue > :first-child { height: auto; padding: 32px 20px !important; }
+    #venue { grid-auto-rows: auto !important; }
+    #venue > :not(:first-child) { height: 240px; }
+    nav[aria-label='Main'] a:not(:last-child) { display: none !important; }
+    nav[aria-label='Main'] { padding: 0 !important; border: 0 !important; background: none !important; }
+    [style*='min-height: 860px'] { min-height: 640px !important; }
+    [style*='gap: 64px'] { gap: 28px !important; }
   }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: Inter, system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: clip;
-  }
-  h1,
-  h2,
-  h3 {
-    font-family: Fraunces, Georgia, serif;
-    font-weight: 600;
-    line-height: 1.15;
-    margin: 0;
-  }
-  a {
-    color: inherit;
-  }
-  .wrap {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+  .form-note { margin: 0; font-size: 13px; line-height: 1.6; color: #2E6B3A; }
 </style>
