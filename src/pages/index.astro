@@ -1,0 +1,302 @@
+---
+import Base from '../layouts/Base.astro';
+
+// Edit the content below to update the site.
+const email = 'hello@aravali.ventures';
+
+const focus = [
+  {
+    title: 'Consumer brands',
+    body: 'Products and experiences with a strong sense of place, built for customers in India and beyond.',
+  },
+  {
+    title: 'Technology',
+    body: 'Software and digital businesses that solve real problems simply and scale with care.',
+  },
+  {
+    title: 'Impact',
+    body: 'Initiatives that create lasting value for communities, alongside commercial returns.',
+  },
+];
+
+const principles = [
+  ['Patient', 'We build for decades, not quarters. Like the hills we are named after, we value endurance.'],
+  ['Hands-on', 'We work alongside founders on product, brand, and operations, not just the cap table.'],
+  ['Rooted', 'We start close to home and grow outward, drawing on local insight and networks.'],
+];
+---
+
+<Base>
+  <header class="nav wrap">
+    <a href="/" class="logo" aria-label="Aravali Ventures home">
+      <svg viewBox="0 0 64 40" width="40" height="25" aria-hidden="true">
+        <path d="M0 40 L20 8 L32 26 L42 14 L64 40 Z" fill="currentColor"></path>
+      </svg>
+      <span>Aravali Ventures</span>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">Building from the Aravalis</p>
+      <h1>We build and back enduring businesses.</h1>
+      <p class="lede">
+        Aravali Ventures is a venture studio and holding company. We start, grow, and invest in
+        companies that are made to last.
+      </p>
+      <a class="btn" href={`mailto:${email}`}>Get in touch</a>
+      <svg class="ridge" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 160 L0 110 L120 60 L210 95 L330 30 L450 90 L560 50 L680 100 L800 40 L920 85 L1040 55 L1200 100 L1200 160 Z"></path>
+      </svg>
+    </section>
+
+    <section id="about" class="band">
+      <div class="wrap split">
+        <h2>About us</h2>
+        <div>
+          <p>
+            The Aravalis are among the oldest mountain ranges on earth. They have stood through
+            everything time has thrown at them. That is the kind of company we want to build.
+          </p>
+          <p>
+            We bring capital, operating experience, and a long view to every venture we take on,
+            working closely with the people who run them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="wrap section">
+      <h2>What we focus on</h2>
+      <div class="grid">
+        {
+          focus.map((f) => (
+            <article class="card">
+              <h3>{f.title}</h3>
+              <p>{f.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2>How we work</h2>
+      <ol class="principles">
+        {
+          principles.map(([t, b]) => (
+            <li>
+              <h3>{t}</h3>
+              <p>{b}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section id="contact" class="band contact">
+      <div class="wrap">
+        <h2>Let's talk.</h2>
+        <p>Founders, partners, and collaborators: we would love to hear from you.</p>
+        <a class="btn" href={`mailto:${email}`}>{email}</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>© {new Date().getFullYear()} Aravali Ventures</span>
+    <span>Rajasthan, India</span>
+  </footer>
+</Base>
+
+<style>
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .logo svg {
+    color: var(--accent);
+  }
+  .nav nav {
+    display: flex;
+    gap: 24px;
+    font-size: 15px;
+  }
+  .nav nav a {
+    text-decoration: none;
+    color: var(--muted);
+  }
+  .nav nav a:hover {
+    color: var(--ink);
+  }
+
+  .hero {
+    position: relative;
+    padding-top: 96px;
+    padding-bottom: 200px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 0 0 16px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 7vw, 76px);
+    max-width: 14ch;
+  }
+  .lede {
+    font-size: 20px;
+    color: var(--muted);
+    max-width: 38ch;
+    margin: 24px 0 32px;
+  }
+  .ridge {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1px;
+    width: 100vw;
+    height: 140px;
+    fill: var(--surface);
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .btn:hover {
+    background: var(--accent);
+  }
+
+  .band {
+    background: var(--surface);
+    padding: 88px 0;
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+  }
+  .split h2,
+  .section h2,
+  .contact h2 {
+    font-size: clamp(30px, 4vw, 44px);
+  }
+  .split p {
+    margin: 0 0 16px;
+    font-size: 19px;
+  }
+
+  .section {
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .card h3,
+  .principles h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .card p,
+  .principles p {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .principles {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    counter-reset: p;
+  }
+  .principles li {
+    border-top: 2px solid var(--accent);
+    padding-top: 20px;
+  }
+
+  .contact {
+    text-align: center;
+  }
+  .contact p {
+    color: var(--muted);
+    font-size: 19px;
+    margin: 16px 0 32px;
+  }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 760px) {
+    .nav nav {
+      display: none;
+    }
+    .hero {
+      padding-top: 48px;
+      padding-bottom: 150px;
+    }
+    .ridge {
+      height: 100px;
+    }
+    .split,
+    .grid,
+    .principles {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .band {
+      padding: 64px 0;
+    }
+    .section {
+      padding-top: 64px;
+    }
+  }
+</style>
