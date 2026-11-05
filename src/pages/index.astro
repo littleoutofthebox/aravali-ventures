@@ -11,12 +11,40 @@ const img = {
   pitch: '/images/fad226008d9abf3a9747be4e284db0b3.jpg',
 };
 
-const process = [
-  { n: '01', t: 'Source', d: 'Our team builds a pipeline of early-stage and growth startups from across India through its network, partners and ecosystem relationships.' },
-  { n: '02', t: 'Screen', d: 'Every applicant is reviewed on team, market, business model, traction and financials. Only selected startups are invited to present.' },
-  { n: '03', t: 'Profile', d: 'Investors receive a structured profile of each startup before the evening, so they arrive knowing what to ask.' },
-  { n: '04', t: 'Match & pitch', d: 'Selected founders pitch to the room, and one-to-one meetings are arranged by sector, stage, ticket size and thesis.' },
-  { n: '05', t: 'Follow through', d: 'After the summit, our team supports both sides through diligence, deal structuring, valuation discussions and documentation.' },
+const highlights = [
+  { k: 'Top HNIs', t: 'From Tier-2 and Tier-3 cities', d: 'Leading business families, industrialists and high-net-worth investors from Udaipur, Jaipur, Jodhpur, Kota and beyond.' },
+  { k: '1 question', t: 'How to evaluate a startup', d: 'The whole evening is built around one practical skill: judging a startup before you put money in.' },
+  { k: '6 startups', t: 'Curated, from six domains', d: 'Six screened startups from different sectors showcase live, each evaluated in the room.' },
+  { k: 'Awareness', t: 'Startup investing, demystified', d: 'Built to educate first: what to look for, what to ask and how to start small and safely.' },
+];
+
+const framework = [
+  { n: '01', t: 'The founder', d: 'Commitment, capability and integrity. How to judge the people behind the pitch.' },
+  { n: '02', t: 'The problem and market', d: 'Is the problem real, is the market large enough, and why now?' },
+  { n: '03', t: 'The business model', d: 'How the company makes money, and whether the unit economics can work at scale.' },
+  { n: '04', t: 'Traction and financials', d: 'Reading early numbers honestly, and separating real progress from a good story.' },
+  { n: '05', t: 'Valuation and terms', d: 'What a fair price looks like, and the terms that protect a first-time investor.' },
+  { n: '06', t: 'Legal and risk', d: 'Due diligence, documentation and the red flags to check before you sign.' },
+];
+
+const investorPoints = [
+  'A practical framework for evaluating any startup',
+  'Six screened startups, with structured profiles shared in advance',
+  'Live expert evaluation of each pitch: what to ask and what to watch',
+  'Legal and financial guidance if you choose to invest',
+];
+
+const startupPoints = [
+  'One of only six showcase slots at the summit',
+  'Present to leading HNIs and business families from Tier-2 and Tier-3 cities',
+  'Help preparing your pitch, financial model and key metrics',
+  'Investor follow-up and guidance on terms after the evening',
+];
+
+const different = [
+  { t: 'Built for Tier-2 and Tier-3 investors', d: 'Designed around the real questions of business leaders outside the metros, not for professional funds alone.' },
+  { t: 'Learning first, investing second', d: 'The aim is awareness and confidence. Nobody is pushed to invest on the night.' },
+  { t: 'Curated, not crowded', d: 'Only six startups, each screened by our team, so every pitch gets the attention it deserves.' },
 ];
 
 const expertise = [
@@ -25,31 +53,11 @@ const expertise = [
   { t: 'Financial', d: 'Deep capability in financial analysis, valuation, due diligence and capital structuring.' },
   { t: 'Ecosystem', d: 'Long-standing relationships with founders, angels, family offices, funds, incubators and accelerators.' },
 ];
-
-const investorPoints = [
-  'A curated line-up of screened, investment-ready startups',
-  'Structured profiles with key metrics and risks, shared in advance',
-  'One-to-one meetings matched to your sector, stage and ticket size',
-  'A closed-door investment session, plus legal and financial support to close',
-];
-
-const startupPoints = [
-  'A room of angels, family offices, funds and strategic investors',
-  'Help preparing your pitch, financial model and key metrics',
-  'Matched meetings with investors who fit what you are building',
-  'Guidance on valuation, terms and deal structure after the summit',
-];
-
-const principles = [
-  { t: 'Curated, not crowded', d: 'A small, considered room. Fewer startups, chosen with care, so every introduction is worth an investor’s time.' },
-  { t: 'Evidence over excitement', d: 'Every pitch is backed by a structured profile and independent review, not just a strong presentation.' },
-  { t: 'Built to lead to decisions', d: 'The evening is designed around next steps, with expert support on both sides once interest turns into a deal.' },
-];
 ---
 
 <Base
-  title="Udaipur Investor Summit · 19 November 2026 · Aravali Ventures"
-  description="An invitation-only evening where investors, family offices and funds meet screened, investment-ready startups. Hosted by Aravali Ventures Private Limited. 19 November 2026, Holymont Resort, Udaipur."
+  title="Udaipur Investor Summit · How should an HNI evaluate a startup? · 19 Nov 2026"
+  description="An invitation-only evening for top HNIs from Tier-2 and Tier-3 cities on how to evaluate a startup before investing, with six curated startup showcases from six domains. Hosted by Aravali Ventures. 19 November 2026, Holymont Resort, Udaipur."
   image="/images/4e49ac4d5af10c709084df905cc2e0b8.jpg"
 >
   <div class="page">
@@ -59,26 +67,26 @@ const principles = [
       <header class="nav">
         <a href="/" aria-label="Aravali Ventures home"><img src={img.logo} alt="Aravali Ventures" class="logo" /></a>
         <nav aria-label="Main">
-          <a href="#about" class="hide-sm">About</a>
-          <a href="#how" class="hide-sm">How it works</a>
+          <a href="#why" class="hide-sm">Why attend</a>
+          <a href="#learn" class="hide-sm">What you'll learn</a>
+          <a href="#startups-six" class="hide-sm">Six startups</a>
           <a href="#programme" class="hide-sm">Programme</a>
-          <a href="#host" class="hide-sm">Hosts</a>
           <a href="#venue" class="hide-sm">Venue</a>
           <a href="#invite" class="pill">Request invitation</a>
         </nav>
       </header>
       <div class="hero-body hero-grid">
         <div class="hero-main">
-          <span class="badge"><span class="dot"></span>By invitation only</span>
+          <span class="badge"><span class="dot"></span>By invitation only · Hosted by Aravali Ventures</span>
           <h1>Udaipur Investor Summit</h1>
+          <p class="hero-q">How should you evaluate a startup before you invest?</p>
           <p class="lede">
-            The bridge between capital and India's most promising startups. One evening where investors,
-            family offices and funds meet screened, investment-ready founders, hosted by a team with the
-            industry, legal and financial expertise to take good conversations all the way to a deal.
+            An evening for top HNIs and business families from Tier-2 and Tier-3 cities to learn how startup
+            investing really works, and to see it applied live on six curated startups from six different domains.
           </p>
           <div class="ctas">
             <a href="#invite" class="btn red">Request invitation <span aria-hidden="true">→</span></a>
-            <a href="#how" class="btn ghost">How it works</a>
+            <a href="#startups" class="btn ghost">Apply to showcase</a>
           </div>
         </div>
         <dl class="hero-facts">
@@ -89,69 +97,51 @@ const principles = [
       </div>
     </section>
 
-    <section class="strip" aria-label="How the summit works">
-      <span>Source</span><span aria-hidden="true">✦</span><span>Screen</span><span aria-hidden="true">✦</span><span>Profile</span><span aria-hidden="true">✦</span><span>Match &amp; pitch</span><span aria-hidden="true">✦</span><span>Follow through</span>
+    <section class="usps" aria-label="Summit highlights">
+      {
+        highlights.map((h) => (
+          <article class="usp">
+            <span class="usp-k">{h.k}</span>
+            <h3>{h.t}</h3>
+            <p>{h.d}</p>
+          </article>
+        ))
+      }
     </section>
 
-    <section class="card cream story" id="about">
+    <section class="card cream story" id="why">
       <div class="story-head">
-        <span class="eyebrow eb-dark">01 · About the summit</span>
-        <h2>One trusted room where investors and startups meet.</h2>
+        <span class="eyebrow eb-dark">01 · Why this summit</span>
+        <h2>Our cities have the capital. What's missing is a way to judge the opportunity.</h2>
       </div>
       <div class="story-body">
         <p>
-          Capital and opportunity are both growing in India, but they rarely find each other efficiently.
-          Investors struggle to discover and evaluate early-stage companies with confidence. Founders spend
-          months searching for the right investors and often raise money without the guidance that should
-          come with it.
+          Across Rajasthan and India's Tier-2 and Tier-3 cities, successful business owners understand
+          business exceptionally well. Many now want to back young founders: to share their experience,
+          open their networks and take part in the value those companies create. Most want to start small,
+          with ₹5 or ₹10 lakh in a promising early-stage company.
         </p>
         <p>
-          The Udaipur Investor Summit closes that gap. We source and screen startups, present them to
-          investors with the context they need, and support every conversation that follows, through to
-          closing and beyond.
+          Some have tried, through startup networks, incubators and pitch events. Too often those
+          investments struggle or stall, and the investor returns to the businesses he already knows. The
+          problem is rarely a lack of capital. It is the lack of a reliable way to answer one question:
         </p>
-        <blockquote>Fewer, better introductions. Clearer decisions. Stronger companies.</blockquote>
+        <blockquote>“How do I identify the right founder, the right business and the right opportunity before I invest?”</blockquote>
+        <p class="sign">The Udaipur Investor Summit exists to answer it.</p>
       </div>
     </section>
 
-    <section class="split">
-      <article class="card dark side">
-        <img src={img.handshake} alt="An investor and a founder shaking hands" />
-        <div class="side-body">
-          <span class="eyebrow">The investor's challenge</span>
-          <h3>Plenty of capital. Too little clarity.</h3>
-          <p>
-            Angels, business families, family offices and funds want exposure to high-growth companies, but
-            reliable deal flow is hard to find, and separating a strong business from a strong presentation
-            takes time, expertise and access.
-          </p>
-        </div>
-      </article>
-      <article class="card dark side">
-        <img src={img.pitch} alt="A founder presenting to an audience" />
-        <div class="side-body">
-          <span class="eyebrow">The founder's challenge</span>
-          <h3>Great ideas. Hard-to-reach capital.</h3>
-          <p>
-            Promising founders across India lose valuable time knocking on the wrong doors. Many raise without
-            the strategic, legal and financial guidance that could make the difference between surviving and
-            scaling.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="card dark" id="how">
+    <section class="card dark" id="learn">
       <div class="head-row">
         <div>
-          <span class="eyebrow">02 · How it works</span>
-          <h2>A structured path from application to investment.</h2>
+          <span class="eyebrow">02 · What you'll learn</span>
+          <h2>How to evaluate a startup, step by step.</h2>
         </div>
-        <p class="aside">Every startup at the summit goes through the same disciplined process, before, during and after the evening.</p>
+        <p class="aside">A practical framework, taught by industry, legal and financial experts, and applied live to every startup on stage.</p>
       </div>
-      <div class="steps five">
+      <div class="steps six">
         {
-          process.map((s) => (
+          framework.map((s) => (
             <article class="step">
               <span class="num">{s.n}</span>
               <h3>{s.t}</h3>
@@ -162,27 +152,65 @@ const principles = [
       </div>
     </section>
 
+    <section class="card red-card six-card" id="startups-six">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow eb-light">03 · The showcase</span>
+          <h2>Six startups. Six domains. Evaluated live.</h2>
+        </div>
+        <p class="aside light">
+          Each startup is screened by our team and profiled in advance. On the night, founders pitch and our
+          panel shows you exactly how to assess what you have just heard.
+        </p>
+      </div>
+      <div class="slots">
+        {
+          [1, 2, 3, 4, 5, 6].map((n) => (
+            <div class="slot">
+              <span class="slot-n">0{n}</span>
+              <span class="slot-t">Showcase {n}</span>
+              <span class="slot-d">Domain revealed to confirmed guests</span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="card cream principles-card">
+      <span class="eyebrow eb-dark">04 · What makes it different</span>
+      <div class="principles">
+        {
+          different.map((p) => (
+            <article>
+              <h3>{p.t}</h3>
+              <p>{p.d}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
     <Fragment set:html={programme} />
 
     <section class="split">
       <article class="card cream who" id="investors">
-        <span class="eyebrow eb-dark">For investors and funds</span>
-        <h3>Invest in high-potential startups with confidence.</h3>
+        <span class="eyebrow eb-dark">For HNIs and investors</span>
+        <h3>Invest with knowledge, not guesswork.</h3>
         <ul class="list">{investorPoints.map((p) => <li>{p}</li>)}</ul>
         <a class="btn black" href="#invite" data-pick="I">Request a seat <span aria-hidden="true">→</span></a>
       </article>
-      <article class="card red-card who" id="startups">
-        <span class="eyebrow eb-light">For startups</span>
-        <h3>Raise from the right investors, not just any investors.</h3>
+      <article class="card dark who" id="startups">
+        <span class="eyebrow">For startups</span>
+        <h3>Six slots. One room of serious investors.</h3>
         <ul class="list">{startupPoints.map((p) => <li>{p}</li>)}</ul>
-        <a class="btn cream-btn" href="#invite" data-pick="F">Apply to pitch <span aria-hidden="true">→</span></a>
+        <a class="btn red" href="#invite" data-pick="F">Apply to showcase <span aria-hidden="true">→</span></a>
       </article>
     </section>
 
     <section class="card dark" id="host">
       <div class="head-row">
         <div>
-          <span class="eyebrow">04 · Hosted by Aravali Ventures</span>
+          <span class="eyebrow">06 · Hosted by Aravali Ventures</span>
           <h2>Expertise across every side of a deal.</h2>
         </div>
         <p class="aside">
@@ -202,20 +230,6 @@ const principles = [
       </div>
     </section>
 
-    <section class="card cream principles-card">
-      <span class="eyebrow eb-dark">05 · What sets the summit apart</span>
-      <div class="principles">
-        {
-          principles.map((p) => (
-            <article>
-              <h3>{p.t}</h3>
-              <p>{p.d}</p>
-            </article>
-          ))
-        }
-      </div>
-    </section>
-
     <Fragment set:html={venue} />
 
     <Fragment set:html={invite} />
@@ -228,7 +242,7 @@ const principles = [
           <div><span class="label">Contact</span><span>Aravali Ventures</span><a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a><a href="tel:+918696940199">+91 86969 40199</a></div>
         </div>
       </div>
-      <div class="foot-big">Innovation meets investment</div>
+      <div class="foot-big">Invest with knowledge</div>
       <div class="foot-bottom"><span>© 2026 Aravali Ventures Private Limited · aravali.ventures</span><span>Attendance by invitation only</span></div>
     </footer>
   </div>
@@ -330,6 +344,23 @@ const principles = [
   .hero-facts div { padding: 18px 22px; border-radius: 18px; background: rgba(11,11,11,0.6); border: 1px solid rgba(244,239,231,0.16); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
   .hero-facts dt { font-size: 12px; color: #a8a196; }
   .hero-facts dd { margin: 0; font-size: 16px; font-weight: 600; text-align: right; }
+  .hero-q { margin: -6px 0 0; font-size: clamp(1.3rem, 2.4vw, 2rem); font-weight: 600; line-height: 1.25; color: #f4efe7; letter-spacing: -0.015em; }
+  .usps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .usp { border-radius: 24px; background: #161616; border: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .usp:nth-child(3) { background: #c8242a; border-color: #c8242a; }
+  .usp-k { font-size: clamp(1.8rem, 2.6vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; color: #e0474b; }
+  .usp:nth-child(3) .usp-k { color: #fff; }
+  .usp h3 { font-size: 18px; }
+  .usp p { font-size: 14px; color: #a8a196; }
+  .usp:nth-child(3) p { color: #ffe1de; }
+  .steps.six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .aside.light { color: #ffe1de; }
+  .slots { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+  .slot { border-radius: 20px; background: rgba(0,0,0,0.18); border: 1px solid rgba(255,255,255,0.25); padding: 22px; min-height: 180px; display: flex; flex-direction: column; gap: 8px; }
+  .slot-n { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; }
+  .slot-t { margin-top: auto; font-size: 16px; font-weight: 600; }
+  .slot-d { font-size: 12px; color: #ffe1de; line-height: 1.5; }
+  .dark .list li { background: #0b0b0b; border: 1px solid #262626; }
   .strip {
     border-radius: 28px; background: #c8242a; color: #fff; padding: 26px 40px; display: flex; flex-wrap: wrap;
     justify-content: space-between; align-items: center; gap: 14px 28px; font-size: 15px; font-weight: 600;
@@ -405,6 +436,9 @@ const principles = [
   .foot-bottom { border-top: 1px solid #262626; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; }
 
   @media (max-width: 1000px) {
+    .usps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .slots { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .steps.six { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .principles { grid-template-columns: 1fr; }
     .steps, .steps.five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .story, .why, .contact { grid-template-columns: 1fr; gap: 32px; }
@@ -419,6 +453,9 @@ const principles = [
     .hero-body { padding: 24px 20px 32px; }
     .lede { font-size: 17px; }
     .strip { padding: 22px 20px; }
+    .usps, .steps.six { grid-template-columns: 1fr; }
+    .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .slot { min-height: 140px; }
     .split, .steps, .steps.five { grid-template-columns: 1fr; }
     .ticks { grid-template-columns: 1fr; }
     .side { padding: 0; }
