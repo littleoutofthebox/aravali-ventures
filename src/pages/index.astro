@@ -10,36 +10,39 @@ const img = {
   sunset: '/images/9f540dc3651941d08bdd0a42ea989507.jpg',
 };
 
-const steps = [
-  {
-    n: '01',
-    t: 'Discover',
-    d: 'We bring promising early-stage startups from Bengaluru, Pune, Delhi, Ahmedabad and beyond to investors in Udaipur, Jaipur, Jodhpur, Kota and other growing business centres.',
-  },
-  {
-    n: '02',
-    t: 'Evaluate',
-    d: 'Every opportunity comes with a structured profile, the right questions to ask and access to relevant expertise, so decisions rest on evidence rather than excitement.',
-  },
-  {
-    n: '03',
-    t: 'Connect',
-    d: 'We arrange introductions that fit: matched by sector, stage and ticket size, so investors meet founders they can genuinely help.',
-  },
-  {
-    n: '04',
-    t: 'Build together',
-    d: 'Founders gain more than a cheque. They gain the experience, relationships and practical wisdom of people who have built businesses themselves.',
-  },
+const process = [
+  { n: '01', t: 'Source', d: 'We build a pipeline of early-stage and growth startups from across India through our network, partners and ecosystem relationships.' },
+  { n: '02', t: 'Screen', d: 'Every company is reviewed on its team, market, business model, traction and financials before it is presented to investors.' },
+  { n: '03', t: 'Match', d: 'Opportunities are matched to each investor by sector, stage, ticket size and investment thesis.' },
+  { n: '04', t: 'Close', d: 'We support both sides through diligence, deal structuring, valuation discussions and documentation.' },
+  { n: '05', t: 'Grow', d: 'After investment, we stay involved: helping founders with strategy, governance and follow-on capital.' },
 ];
 
-const strengths = [
-  'Building lasting relationships',
-  'Managing people',
-  'Serving customers',
-  'Controlling costs',
-  'Negotiating with suppliers',
-  'Surviving difficult business cycles',
+const expertise = [
+  { t: 'Industry', d: 'Operators and business leaders with hands-on experience building, scaling and running companies across sectors.' },
+  { t: 'Legal', d: 'Specialists in transaction structuring, investment documentation, compliance and governance.' },
+  { t: 'Financial', d: 'Deep capability in financial analysis, valuation, due diligence and capital structuring.' },
+  { t: 'Ecosystem', d: 'Long-standing relationships with founders, angels, family offices, funds, incubators and accelerators.' },
+];
+
+const investorPoints = [
+  'A curated flow of screened, investment-ready startups',
+  'Clear opportunity profiles with key risks and metrics',
+  'Legal and financial support through diligence and closing',
+  'Flexible participation, from first cheques to larger rounds',
+];
+
+const startupPoints = [
+  'Access to angels, family offices, funds and strategic investors',
+  'Help preparing your pitch, financial model and data room',
+  'Guidance on valuation, terms and deal structure',
+  'Mentorship and networks that last beyond the round',
+];
+
+const principles = [
+  { t: 'Curated, not crowded', d: 'We present fewer opportunities, chosen with care, so every introduction is worth an investor’s time.' },
+  { t: 'Evidence over excitement', d: 'Decisions are supported by structured information and independent review, not just a strong pitch.' },
+  { t: 'Aligned on both sides', d: 'We succeed when investors make good decisions and founders build lasting companies.' },
 ];
 ---
 
@@ -51,99 +54,75 @@ const strengths = [
       <header class="nav">
         <a href="/" aria-label="Aravali Ventures home"><img src={img.logo} alt="Aravali Ventures" class="logo" /></a>
         <nav aria-label="Main">
-          <a href="#story" class="hide-sm">Our story</a>
-          <a href="#approach" class="hide-sm">What we do</a>
-          <a href="/udaipur-investor-summit" class="hide-sm">Investor Summit</a>
+          <a href="#about" class="hide-sm">About us</a>
+          <a href="#investors" class="hide-sm">Investors</a>
+          <a href="#startups" class="hide-sm">Startups</a>
+          <a href="#team" class="hide-sm">Our team</a>
+          <a href="/udaipur-investor-summit" class="hide-sm">Summit</a>
           <a href="#contact" class="pill">Get in touch</a>
         </nav>
       </header>
       <div class="hero-body">
-        <span class="badge"><span class="dot"></span>Aravali Ventures</span>
-        <h1>The business wisdom of our cities, backing India's next founders.</h1>
+        <span class="badge"><span class="dot"></span>Aravali Ventures Private Limited</span>
+        <h1>The bridge between capital and India's most promising startups.</h1>
         <p class="lede">
-          We connect established entrepreneurs, business families and investors in Rajasthan and India's
-          emerging cities with promising early-stage startups, and give them a structured way to find,
-          evaluate and support the right ones.
+          Aravali Ventures connects investors, family offices and funds with high-potential startups, and
+          supports both sides with the industry, legal and financial expertise to invest with confidence.
         </p>
         <div class="ctas">
-          <a href="#contact" class="btn red">Invest with us <span aria-hidden="true">→</span></a>
-          <a href="#founders" class="btn ghost">I'm a founder</a>
+          <a href="#investors" class="btn red">For investors <span aria-hidden="true">→</span></a>
+          <a href="#startups" class="btn ghost">For startups</a>
         </div>
       </div>
     </section>
 
     <section class="strip" aria-label="What we do">
-      <span>Discover</span><span aria-hidden="true">✦</span><span>Evaluate</span><span aria-hidden="true">✦</span><span>Connect</span><span aria-hidden="true">✦</span><span>Invest</span><span aria-hidden="true">✦</span><span>Build together</span>
+      <span>Source</span><span aria-hidden="true">✦</span><span>Screen</span><span aria-hidden="true">✦</span><span>Match</span><span aria-hidden="true">✦</span><span>Close</span><span aria-hidden="true">✦</span><span>Grow</span>
     </section>
 
-    <section class="card cream story" id="story">
+    <section class="card cream story" id="about">
       <div class="story-head">
-        <span class="eyebrow eb-dark">01 · Why we exist</span>
-        <h2>It started with one conversation.</h2>
+        <span class="eyebrow eb-dark">01 · Who we are</span>
+        <h2>A trusted bridge between investors and startups.</h2>
       </div>
       <div class="story-body">
         <p>
-          One day I met an established businessperson from a Tier-2 city. He was a well-known face in his
-          community. Through years of hard work he had built a successful business and gathered valuable
-          experience, relationships and financial resources.
+          Capital and opportunity are both growing in India, but they rarely find each other efficiently.
+          Investors struggle to discover and evaluate early-stage companies with confidence. Founders spend
+          months searching for the right investors and often raise money without the guidance that should
+          come with it.
         </p>
         <p>
-          He wanted to help young founders with ideas that were different, ambitious and a little
-          unconventional. He believed his experience, network and guidance could help turn those ideas into
-          real businesses. And if they succeeded, he could share in the wealth they created. He was not
-          looking to invest hundreds of crores. He wanted to start small, with perhaps ₹5 or ₹10 lakh in a
-          promising early-stage company.
+          Aravali Ventures Private Limited exists to close that gap. We source and screen startups, present
+          them to investors with the context they need, and support every transaction through to closing
+          and beyond.
         </p>
-        <p>
-          He explored startup networks, incubators and entrepreneurship platforms, and made a few
-          investments. Over time, some of those ventures struggled. Some failed to build a sustainable
-          business; others did not grow as expected. He became more cautious and went back to the people,
-          businesses and opportunities he already knew.
-        </p>
-        <blockquote>
-          “How do I identify the right founder, the right business and the right opportunity before I invest?”
-        </blockquote>
-        <p class="sign">Gagan Sharma, Aravali Ventures</p>
+        <blockquote>Fewer, better introductions. Clearer decisions. Stronger companies.</blockquote>
       </div>
-    </section>
-
-    <section class="card dark problem">
-      <span class="eyebrow">02 · The problem we solve</span>
-      <h2 class="big">
-        The challenge is not a lack of capital in our cities. <span class="muted">It is a lack of structured
-        access to the right opportunities.</span>
-      </h2>
     </section>
 
     <section class="split">
       <article class="card dark side">
         <img src={img.handshake} alt="An investor and a founder shaking hands" />
         <div class="side-body">
-          <span class="eyebrow">Our cities</span>
-          <h3>Business leaders who understand business exceptionally well.</h3>
+          <span class="eyebrow">The investor's challenge</span>
+          <h3>Plenty of capital. Too little clarity.</h3>
           <p>
-            Across Rajasthan and much of India, entrepreneurs, industrialists, business families and
-            high-net-worth individuals have spent decades learning what makes a business work:
-          </p>
-          <ul class="ticks">{strengths.map((s) => <li>{s}</li>)}</ul>
-          <p class="muted-p">
-            These are exactly the capabilities a young company needs. Yet it is hard to tell a genuinely
-            attractive opportunity from a convincing presentation.
+            Angels, business families, family offices and funds want exposure to high-growth companies, but
+            reliable deal flow is hard to find, and separating a strong business from a strong presentation
+            takes time, expertise and access.
           </p>
         </div>
       </article>
       <article class="card dark side">
         <img src={img.pitch} alt="A founder presenting to an audience" />
         <div class="side-body">
-          <span class="eyebrow">Across India</span>
-          <h3>Founders building new technologies, products and business models.</h3>
+          <span class="eyebrow">The founder's challenge</span>
+          <h3>Great ideas. Hard-to-reach capital.</h3>
           <p>
-            Some are solving real problems and have the potential to build substantial businesses. Others will
-            fail, as happens in entrepreneurship.
-          </p>
-          <p class="muted-p">
-            The ones with promise need more than capital. They need the experience, industry knowledge,
-            relationships and practical wisdom that established business leaders can offer.
+            Promising founders across India lose valuable time knocking on the wrong doors. Many raise without
+            the strategic, legal and financial guidance that could make the difference between surviving and
+            scaling.
           </p>
         </div>
       </article>
@@ -152,17 +131,14 @@ const strengths = [
     <section class="card dark" id="approach">
       <div class="head-row">
         <div>
-          <span class="eyebrow">03 · What we do</span>
-          <h2>We bring these two groups together, with structure.</h2>
+          <span class="eyebrow">02 · How it works</span>
+          <h2>A structured path from first introduction to long-term growth.</h2>
         </div>
-        <p class="aside">
-          Aravali Ventures helps investors discover opportunities, evaluate them with clarity and support the
-          founders they back.
-        </p>
+        <p class="aside">Every opportunity we present follows the same disciplined process.</p>
       </div>
-      <div class="steps">
+      <div class="steps five">
         {
-          steps.map((s) => (
+          process.map((s) => (
             <article class="step">
               <span class="num">{s.n}</span>
               <h3>{s.t}</h3>
@@ -175,38 +151,65 @@ const strengths = [
 
     <section class="split">
       <article class="card cream who" id="investors">
-        <span class="eyebrow eb-dark">For investors</span>
-        <h3>Start small. Decide with clarity.</h3>
-        <ul class="list">
-          <li>Access to screened early-stage startups from across India</li>
-          <li>Structured profiles and the right questions to ask</li>
-          <li>Expert input on the sectors you don't know as well</li>
-          <li>A community of peers investing alongside you</li>
-        </ul>
-        <a class="btn black" href="mailto:contact@aravali.ventures?subject=Investing%20with%20Aravali%20Ventures">Join as an investor <span aria-hidden="true">→</span></a>
+        <span class="eyebrow eb-dark">For investors and funds</span>
+        <h3>Invest in high-potential startups with confidence.</h3>
+        <ul class="list">{investorPoints.map((p) => <li>{p}</li>)}</ul>
+        <a class="btn black" href="mailto:contact@aravali.ventures?subject=Investor%20enquiry%20%E2%80%94%20Aravali%20Ventures">Become an investor <span aria-hidden="true">→</span></a>
       </article>
-      <article class="card red-card who" id="founders">
-        <span class="eyebrow eb-light">For founders</span>
-        <h3>Capital, and the people who know how to build.</h3>
-        <ul class="list">
-          <li>Introductions to investors matched to your sector and stage</li>
-          <li>Business leaders who bring experience, networks and guidance</li>
-          <li>A fair, structured process that rewards substance</li>
-          <li>A path into Rajasthan's business communities</li>
-        </ul>
-        <a class="btn cream-btn" href="mailto:contact@aravali.ventures?subject=Founder%20introduction%20to%20Aravali%20Ventures">Introduce your startup <span aria-hidden="true">→</span></a>
+      <article class="card red-card who" id="startups">
+        <span class="eyebrow eb-light">For startups</span>
+        <h3>Raise from the right investors, not just any investors.</h3>
+        <ul class="list">{startupPoints.map((p) => <li>{p}</li>)}</ul>
+        <a class="btn cream-btn" href="mailto:contact@aravali.ventures?subject=Startup%20application%20%E2%80%94%20Aravali%20Ventures">Apply to raise <span aria-hidden="true">→</span></a>
       </article>
+    </section>
+
+    <section class="card dark" id="team">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow">03 · Our team</span>
+          <h2>Expertise across every side of a deal.</h2>
+        </div>
+        <p class="aside">
+          Aravali Ventures is led by a team of industry, legal and financial professionals with a deep
+          understanding of India's startup and investment ecosystem.
+        </p>
+      </div>
+      <div class="steps">
+        {
+          expertise.map((e) => (
+            <article class="step">
+              <h3>{e.t}</h3>
+              <p>{e.d}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="card cream principles-card">
+      <span class="eyebrow eb-dark">04 · What sets us apart</span>
+      <div class="principles">
+        {
+          principles.map((p) => (
+            <article>
+              <h3>{p.t}</h3>
+              <p>{p.d}</p>
+            </article>
+          ))
+        }
+      </div>
     </section>
 
     <section class="event">
       <img src={img.palace} alt="The Lake Palace lit at night on Lake Pichola, Udaipur" />
       <div class="event-shade"></div>
       <div class="event-body">
-        <span class="badge"><span class="dot"></span>Upcoming · By invitation only</span>
+        <span class="badge"><span class="dot"></span>Upcoming event · By invitation only</span>
         <h2>Udaipur Investor Summit</h2>
         <p>
-          Where it all comes together: one evening where business leaders from Rajasthan meet carefully selected
-          founders, with every startup profiled in advance.
+          An evening where investors, family offices and funds meet a curated group of startups, screened and
+          profiled by our team in advance.
         </p>
         <div class="facts">
           <span>19 November 2026</span><span>4:00 PM onwards</span><span>Holymont Resort, Udaipur</span>
@@ -217,10 +220,10 @@ const strengths = [
 
     <section class="card dark why">
       <div>
-        <span class="eyebrow">04 · Why “Aravali”</span>
+        <span class="eyebrow">05 · Why “Aravali”</span>
         <h2>
-          The Aravalis are among the oldest mountains on earth. <span class="muted">We want to help build businesses
-          with the same staying power.</span>
+          The Aravalis are among the oldest mountains on earth. <span class="muted">We want to help build
+          companies with the same staying power.</span>
         </h2>
       </div>
       <img src={img.sunset} alt="Sunset over Lake Pichola with the Aravali hills on the horizon" />
@@ -228,15 +231,13 @@ const strengths = [
 
     <section class="card cream contact" id="contact">
       <div>
-        <span class="eyebrow eb-dark">05 · Get in touch</span>
-        <h2>Whether you invest or build, let's talk.</h2>
-        <p>
-          Tell us a little about yourself and what you are looking for. We read every message personally.
-        </p>
+        <span class="eyebrow eb-dark">06 · Get in touch</span>
+        <h2>Investing or raising? Let's talk.</h2>
+        <p>Share a few details about yourself or your company, and a member of our team will get back to you.</p>
       </div>
       <div class="contact-card">
         <span class="label">Contact</span>
-        <span class="name">Gagan Sharma</span>
+        <span class="name">Aravali Ventures</span>
         <a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a>
         <a href="tel:+918696940199">+91 86969 40199</a>
         <a class="btn black" href="mailto:contact@aravali.ventures">Write to us <span aria-hidden="true">→</span></a>
@@ -247,12 +248,13 @@ const strengths = [
       <div class="foot-top">
         <img src={img.logo} alt="Aravali Ventures" class="foot-logo" />
         <div class="foot-cols">
-          <div><span class="label">Explore</span><a href="#story">Our story</a><a href="#approach">What we do</a><a href="/udaipur-investor-summit">Udaipur Investor Summit</a></div>
-          <div><span class="label">Contact</span><span>Gagan Sharma</span><a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a><a href="tel:+918696940199">+91 86969 40199</a></div>
+          <div><span class="label">Company</span><a href="#about">About us</a><a href="#investors">For investors</a><a href="#startups">For startups</a><a href="#team">Our team</a></div>
+          <div><span class="label">Events</span><a href="/udaipur-investor-summit">Udaipur Investor Summit</a></div>
+          <div><span class="label">Contact</span><a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a><a href="tel:+918696940199">+91 86969 40199</a></div>
         </div>
       </div>
-      <div class="foot-big">Backing the builders</div>
-      <div class="foot-bottom"><span>© 2026 Aravali Ventures · aravali.ventures</span><span>Udaipur, Rajasthan</span></div>
+      <div class="foot-big">Capital meets conviction</div>
+      <div class="foot-bottom"><span>© 2026 Aravali Ventures Private Limited · aravali.ventures</span><span>Udaipur, Rajasthan, India</span></div>
     </footer>
   </div>
 </Base>
@@ -318,6 +320,10 @@ const strengths = [
 
   /* story */
   .story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 56px; }
+  .steps.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .principles article { border-top: 2px solid #c8242a; padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .principles p { color: #4a453f; }
   .story-body { display: flex; flex-direction: column; gap: 18px; font-size: 17px; color: #2e2a25; }
   blockquote {
     margin: 12px 0 0; padding: 28px 32px; border-radius: 22px; background: #0b0b0b; color: #f4efe7;
@@ -382,7 +388,8 @@ const strengths = [
   .foot-bottom { border-top: 1px solid #262626; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; }
 
   @media (max-width: 1000px) {
-    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .principles { grid-template-columns: 1fr; }
+    .steps, .steps.five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .story, .why, .contact { grid-template-columns: 1fr; gap: 32px; }
   }
   @media (max-width: 760px) {
@@ -395,7 +402,7 @@ const strengths = [
     .hero-body { padding: 24px 20px 32px; }
     .lede { font-size: 17px; }
     .strip { padding: 22px 20px; }
-    .split, .steps { grid-template-columns: 1fr; }
+    .split, .steps, .steps.five { grid-template-columns: 1fr; }
     .ticks { grid-template-columns: 1fr; }
     .side { padding: 0; }
     .side img { height: 220px; }
