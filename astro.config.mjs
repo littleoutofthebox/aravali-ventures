@@ -3,4 +3,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://aravali.ventures',
+  redirects: {
+    '/udaipur-investor-summit': '/',
+  },
 });
