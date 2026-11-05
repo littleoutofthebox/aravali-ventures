@@ -1,41 +1,413 @@
 ---
 import Base from '../layouts/Base.astro';
-// Page markup is exported from the "Udaipur Investor Summit" design in Claude.
-import summit from '../content/summit.html?raw';
+
+const img = {
+  logo: '/images/735d5f722b7251bdb85d64e249e1b5aa.png',
+  ridge: '/images/092749b22adb654b1872344154eee48c.jpg',
+  palace: '/images/4e49ac4d5af10c709084df905cc2e0b8.jpg',
+  handshake: '/images/c8024809b47751bf4068834578619de1.jpg',
+  pitch: '/images/fad226008d9abf3a9747be4e284db0b3.jpg',
+  sunset: '/images/9f540dc3651941d08bdd0a42ea989507.jpg',
+};
+
+const steps = [
+  {
+    n: '01',
+    t: 'Discover',
+    d: 'We bring promising early-stage startups from Bengaluru, Pune, Delhi, Ahmedabad and beyond to investors in Udaipur, Jaipur, Jodhpur, Kota and other growing business centres.',
+  },
+  {
+    n: '02',
+    t: 'Evaluate',
+    d: 'Every opportunity comes with a structured profile, the right questions to ask and access to relevant expertise, so decisions rest on evidence rather than excitement.',
+  },
+  {
+    n: '03',
+    t: 'Connect',
+    d: 'We arrange introductions that fit: matched by sector, stage and ticket size, so investors meet founders they can genuinely help.',
+  },
+  {
+    n: '04',
+    t: 'Build together',
+    d: 'Founders gain more than a cheque. They gain the experience, relationships and practical wisdom of people who have built businesses themselves.',
+  },
+];
+
+const strengths = [
+  'Building lasting relationships',
+  'Managing people',
+  'Serving customers',
+  'Controlling costs',
+  'Negotiating with suppliers',
+  'Surviving difficult business cycles',
+];
 ---
 
 <Base>
-  <Fragment set:html={summit} />
+  <div class="page">
+    <section class="hero" id="top">
+      <img class="hero-bg" src={img.ridge} alt="A fort on a ridge of the Aravali hills" />
+      <div class="hero-shade"></div>
+      <header class="nav">
+        <a href="/" aria-label="Aravali Ventures home"><img src={img.logo} alt="Aravali Ventures" class="logo" /></a>
+        <nav aria-label="Main">
+          <a href="#story" class="hide-sm">Our story</a>
+          <a href="#approach" class="hide-sm">What we do</a>
+          <a href="/udaipur-investor-summit" class="hide-sm">Investor Summit</a>
+          <a href="#contact" class="pill">Get in touch</a>
+        </nav>
+      </header>
+      <div class="hero-body">
+        <span class="badge"><span class="dot"></span>Aravali Ventures</span>
+        <h1>The business wisdom of our cities, backing India's next founders.</h1>
+        <p class="lede">
+          We connect established entrepreneurs, business families and investors in Rajasthan and India's
+          emerging cities with promising early-stage startups, and give them a structured way to find,
+          evaluate and support the right ones.
+        </p>
+        <div class="ctas">
+          <a href="#contact" class="btn red">Invest with us <span aria-hidden="true">→</span></a>
+          <a href="#founders" class="btn ghost">I'm a founder</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="What we do">
+      <span>Discover</span><span aria-hidden="true">✦</span><span>Evaluate</span><span aria-hidden="true">✦</span><span>Connect</span><span aria-hidden="true">✦</span><span>Invest</span><span aria-hidden="true">✦</span><span>Build together</span>
+    </section>
+
+    <section class="card cream story" id="story">
+      <div class="story-head">
+        <span class="eyebrow eb-dark">01 · Why we exist</span>
+        <h2>It started with one conversation.</h2>
+      </div>
+      <div class="story-body">
+        <p>
+          One day I met an established businessperson from a Tier-2 city. He was a well-known face in his
+          community. Through years of hard work he had built a successful business and gathered valuable
+          experience, relationships and financial resources.
+        </p>
+        <p>
+          He wanted to help young founders with ideas that were different, ambitious and a little
+          unconventional. He believed his experience, network and guidance could help turn those ideas into
+          real businesses. And if they succeeded, he could share in the wealth they created. He was not
+          looking to invest hundreds of crores. He wanted to start small, with perhaps ₹5 or ₹10 lakh in a
+          promising early-stage company.
+        </p>
+        <p>
+          He explored startup networks, incubators and entrepreneurship platforms, and made a few
+          investments. Over time, some of those ventures struggled. Some failed to build a sustainable
+          business; others did not grow as expected. He became more cautious and went back to the people,
+          businesses and opportunities he already knew.
+        </p>
+        <blockquote>
+          “How do I identify the right founder, the right business and the right opportunity before I invest?”
+        </blockquote>
+        <p class="sign">Gagan Sharma, Aravali Ventures</p>
+      </div>
+    </section>
+
+    <section class="card dark problem">
+      <span class="eyebrow">02 · The problem we solve</span>
+      <h2 class="big">
+        The challenge is not a lack of capital in our cities. <span class="muted">It is a lack of structured
+        access to the right opportunities.</span>
+      </h2>
+    </section>
+
+    <section class="split">
+      <article class="card dark side">
+        <img src={img.handshake} alt="An investor and a founder shaking hands" />
+        <div class="side-body">
+          <span class="eyebrow">Our cities</span>
+          <h3>Business leaders who understand business exceptionally well.</h3>
+          <p>
+            Across Rajasthan and much of India, entrepreneurs, industrialists, business families and
+            high-net-worth individuals have spent decades learning what makes a business work:
+          </p>
+          <ul class="ticks">{strengths.map((s) => <li>{s}</li>)}</ul>
+          <p class="muted-p">
+            These are exactly the capabilities a young company needs. Yet it is hard to tell a genuinely
+            attractive opportunity from a convincing presentation.
+          </p>
+        </div>
+      </article>
+      <article class="card dark side">
+        <img src={img.pitch} alt="A founder presenting to an audience" />
+        <div class="side-body">
+          <span class="eyebrow">Across India</span>
+          <h3>Founders building new technologies, products and business models.</h3>
+          <p>
+            Some are solving real problems and have the potential to build substantial businesses. Others will
+            fail, as happens in entrepreneurship.
+          </p>
+          <p class="muted-p">
+            The ones with promise need more than capital. They need the experience, industry knowledge,
+            relationships and practical wisdom that established business leaders can offer.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="card dark" id="approach">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow">03 · What we do</span>
+          <h2>We bring these two groups together, with structure.</h2>
+        </div>
+        <p class="aside">
+          Aravali Ventures helps investors discover opportunities, evaluate them with clarity and support the
+          founders they back.
+        </p>
+      </div>
+      <div class="steps">
+        {
+          steps.map((s) => (
+            <article class="step">
+              <span class="num">{s.n}</span>
+              <h3>{s.t}</h3>
+              <p>{s.d}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="split">
+      <article class="card cream who" id="investors">
+        <span class="eyebrow eb-dark">For investors</span>
+        <h3>Start small. Decide with clarity.</h3>
+        <ul class="list">
+          <li>Access to screened early-stage startups from across India</li>
+          <li>Structured profiles and the right questions to ask</li>
+          <li>Expert input on the sectors you don't know as well</li>
+          <li>A community of peers investing alongside you</li>
+        </ul>
+        <a class="btn black" href="mailto:contact@aravali.ventures?subject=Investing%20with%20Aravali%20Ventures">Join as an investor <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="card red-card who" id="founders">
+        <span class="eyebrow eb-light">For founders</span>
+        <h3>Capital, and the people who know how to build.</h3>
+        <ul class="list">
+          <li>Introductions to investors matched to your sector and stage</li>
+          <li>Business leaders who bring experience, networks and guidance</li>
+          <li>A fair, structured process that rewards substance</li>
+          <li>A path into Rajasthan's business communities</li>
+        </ul>
+        <a class="btn cream-btn" href="mailto:contact@aravali.ventures?subject=Founder%20introduction%20to%20Aravali%20Ventures">Introduce your startup <span aria-hidden="true">→</span></a>
+      </article>
+    </section>
+
+    <section class="event">
+      <img src={img.palace} alt="The Lake Palace lit at night on Lake Pichola, Udaipur" />
+      <div class="event-shade"></div>
+      <div class="event-body">
+        <span class="badge"><span class="dot"></span>Upcoming · By invitation only</span>
+        <h2>Udaipur Investor Summit</h2>
+        <p>
+          Where it all comes together: one evening where business leaders from Rajasthan meet carefully selected
+          founders, with every startup profiled in advance.
+        </p>
+        <div class="facts">
+          <span>19 November 2026</span><span>4:00 PM onwards</span><span>Holymont Resort, Udaipur</span>
+        </div>
+        <a href="/udaipur-investor-summit" class="btn red">Explore the summit <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="card dark why">
+      <div>
+        <span class="eyebrow">04 · Why “Aravali”</span>
+        <h2>
+          The Aravalis are among the oldest mountains on earth. <span class="muted">We want to help build businesses
+          with the same staying power.</span>
+        </h2>
+      </div>
+      <img src={img.sunset} alt="Sunset over Lake Pichola with the Aravali hills on the horizon" />
+    </section>
+
+    <section class="card cream contact" id="contact">
+      <div>
+        <span class="eyebrow eb-dark">05 · Get in touch</span>
+        <h2>Whether you invest or build, let's talk.</h2>
+        <p>
+          Tell us a little about yourself and what you are looking for. We read every message personally.
+        </p>
+      </div>
+      <div class="contact-card">
+        <span class="label">Contact</span>
+        <span class="name">Gagan Sharma</span>
+        <a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a>
+        <a href="tel:+918696940199">+91 86969 40199</a>
+        <a class="btn black" href="mailto:contact@aravali.ventures">Write to us <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <footer class="card dark foot">
+      <div class="foot-top">
+        <img src={img.logo} alt="Aravali Ventures" class="foot-logo" />
+        <div class="foot-cols">
+          <div><span class="label">Explore</span><a href="#story">Our story</a><a href="#approach">What we do</a><a href="/udaipur-investor-summit">Udaipur Investor Summit</a></div>
+          <div><span class="label">Contact</span><span>Gagan Sharma</span><a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a><a href="tel:+918696940199">+91 86969 40199</a></div>
+        </div>
+      </div>
+      <div class="foot-big">Backing the builders</div>
+      <div class="foot-bottom"><span>© 2026 Aravali Ventures · aravali.ventures</span><span>Udaipur, Rajasthan</span></div>
+    </footer>
+  </div>
 </Base>
 
-<script>
-  const show = (aud: string) => {
-    document.querySelectorAll<HTMLElement>('[data-aud-show]').forEach((el) => {
-      el.hidden = el.dataset.audShow !== aud;
-    });
-    document.querySelectorAll<HTMLButtonElement>('.aud-tab').forEach((b) =>
-      b.setAttribute('aria-selected', String(b.dataset.aud === aud)),
-    );
-    document.querySelectorAll<HTMLButtonElement>('.aud-seg').forEach((b) =>
-      b.setAttribute('aria-pressed', String(b.dataset.aud === aud)),
-    );
-  };
-  document.querySelectorAll<HTMLButtonElement>('.aud-tab, .aud-seg').forEach((b) =>
-    b.addEventListener('click', () => show(b.dataset.aud!)),
-  );
+<style>
+  .page {
+    background: #0b0b0b; color: #f4efe7; font-family: 'Montserrat', sans-serif;
+    padding: 16px; display: flex; flex-direction: column; gap: 16px;
+  }
+  h1, h2, h3 { margin: 0; letter-spacing: -0.025em; }
+  h2 { font-size: clamp(2rem, 3.4vw, 3.2rem); font-weight: 600; line-height: 1.1; }
+  h3 { font-size: 24px; font-weight: 600; line-height: 1.25; }
+  p { margin: 0; line-height: 1.7; }
+  .card { border-radius: 28px; padding: 56px; }
+  .dark { background: #161616; border: 1px solid #262626; }
+  .cream { background: #f4efe7; color: #0b0b0b; }
+  .cream a:not(.btn) { color: #0b0b0b; }
+  .red-card { background: #c8242a; color: #fff; }
+  .eyebrow { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #e0474b; margin-bottom: 16px; }
+  .eyebrow.eb-dark { color: #b52025; }
+  .eyebrow.eb-light { color: #ffd9d6; }
+  .muted { color: #a8a196; }
+  .muted-p { color: #a8a196; }
+  .label { font-size: 12px; font-weight: 600; color: inherit; opacity: 0.7; }
 
-  const roles: Record<string, string> = { F: 'Founder', I: 'Investor', P: 'Partner' };
-  const form = document.getElementById('invite-form') as HTMLFormElement | null;
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const active = document.querySelector<HTMLButtonElement>('.aud-seg[aria-pressed="true"]')?.dataset.aud ?? 'F';
-    const lines = [`Attending as: ${roles[active]}`];
-    form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input[name], select[name]').forEach((f) => {
-      if (f.closest('[hidden]')) return;
-      lines.push(`${f.name}: ${f.value}`);
-    });
-    const name = (form.querySelector('[name="Full name"]') as HTMLInputElement)?.value || roles[active];
-    const subject = `Udaipur Investor Summit: invitation request (${roles[active]}, ${name})`;
-    window.location.href = `mailto:contact@aravali.ventures?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
-  });
-</script>
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 28px;
+    border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none; box-sizing: border-box;
+  }
+  .btn.red { background: #c8242a; color: #fff; }
+  .btn.ghost { background: rgba(244, 239, 231, 0.1); border: 1px solid rgba(244, 239, 231, 0.35); color: #f4efe7; }
+  .btn.black { background: #0b0b0b; color: #fff; }
+  .btn.cream-btn { background: #f4efe7; color: #0b0b0b; }
+  .btn:hover { filter: brightness(1.1); }
+
+  /* hero */
+  .hero { position: relative; border-radius: 28px; overflow: hidden; min-height: 820px; display: flex; flex-direction: column; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,11,0.55) 0%, rgba(11,11,11,0.1) 30%, rgba(11,11,11,0.9) 100%), linear-gradient(90deg, rgba(11,11,11,0.75) 0%, rgba(11,11,11,0.35) 50%, rgba(11,11,11,0) 75%); }
+  .nav { position: relative; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .logo { height: 50px; width: auto; display: block; }
+  .nav nav {
+    display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 999px;
+    background: rgba(11,11,11,0.55); border: 1px solid rgba(244,239,231,0.18); font-size: 13px; font-weight: 500;
+  }
+  .nav nav a { color: #f4efe7; text-decoration: none; padding: 0 16px; min-height: 40px; display: inline-flex; align-items: center; border-radius: 999px; }
+  .nav nav a.pill { background: #f4efe7; color: #0b0b0b; font-weight: 600; }
+  .hero-body { position: relative; margin-top: auto; padding: 40px 48px 56px; display: flex; flex-direction: column; gap: 24px; max-width: 900px; }
+  .badge {
+    align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px;
+    background: rgba(200,36,42,0.18); border: 1px solid rgba(224,71,75,0.55); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: #f4efe7;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #e0474b; }
+  .hero h1 { font-size: clamp(2.6rem, 5.4vw, 5.2rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; }
+  .lede { font-size: 20px; line-height: 1.6; color: #dcd4c6; max-width: 640px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+
+  .strip {
+    border-radius: 28px; background: #c8242a; color: #fff; padding: 26px 40px; display: flex; flex-wrap: wrap;
+    justify-content: space-between; align-items: center; gap: 14px 28px; font-size: 15px; font-weight: 600;
+  }
+
+  /* story */
+  .story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 56px; }
+  .story-body { display: flex; flex-direction: column; gap: 18px; font-size: 17px; color: #2e2a25; }
+  blockquote {
+    margin: 12px 0 0; padding: 28px 32px; border-radius: 22px; background: #0b0b0b; color: #f4efe7;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem); font-weight: 600; line-height: 1.35; letter-spacing: -0.015em;
+  }
+  .sign { font-size: 14px; font-weight: 600; color: #6b645a; }
+
+  .problem .big { font-size: clamp(2rem, 4.2vw, 4rem); max-width: 1100px; }
+
+  .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .side { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+  .side img { width: 100%; height: 300px; object-fit: cover; display: block; }
+  .side-body { padding: 40px; display: flex; flex-direction: column; gap: 16px; }
+  .side-body p { color: #dcd4c6; }
+  .side-body .muted-p { color: #a8a196; }
+  .ticks { list-style: none; padding: 0; margin: 4px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .ticks li { padding: 12px 16px; border-radius: 14px; background: #0b0b0b; border: 1px solid #262626; font-size: 14px; font-weight: 500; }
+
+  .head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px; }
+  .head-row h2 { max-width: 720px; }
+  .aside { max-width: 380px; font-size: 15px; color: #a8a196; }
+  .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .step { border-radius: 22px; background: #0b0b0b; border: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .step .num { align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: #c8242a; color: #fff; font-size: 12px; font-weight: 700; }
+  .step p { font-size: 15px; color: #a8a196; }
+
+  .who { display: flex; flex-direction: column; gap: 20px; }
+  .who h3 { font-size: clamp(1.6rem, 2.6vw, 2.4rem); }
+  .list { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+  .list li { padding: 16px 20px; border-radius: 16px; font-size: 15px; font-weight: 500; }
+  .cream .list li { background: #fff; }
+  .red-card .list li { background: rgba(0, 0, 0, 0.16); }
+  .who .btn { align-self: flex-start; }
+
+  .event { position: relative; border-radius: 28px; overflow: hidden; min-height: 620px; display: flex; }
+  .event img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; }
+  .event-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,11,0.92) 0%, rgba(11,11,11,0.55) 55%, rgba(11,11,11,0.1) 100%); }
+  .event-body { position: relative; margin-top: auto; padding: 56px; display: flex; flex-direction: column; gap: 22px; max-width: 680px; }
+  .event h2 { font-size: clamp(2.4rem, 5vw, 4.6rem); font-weight: 700; line-height: 1; letter-spacing: -0.035em; }
+  .event p { font-size: 18px; color: #dcd4c6; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px; }
+  .facts span { padding: 10px 16px; border-radius: 999px; background: rgba(11,11,11,0.6); border: 1px solid rgba(244,239,231,0.2); font-size: 14px; font-weight: 600; }
+  .event .btn { align-self: flex-start; }
+
+  .why { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+  .why img { width: 100%; height: 360px; object-fit: cover; border-radius: 22px; display: block; }
+
+  .contact { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .contact p { margin-top: 20px; font-size: 17px; color: #4a453f; max-width: 520px; }
+  .contact-card { border-radius: 22px; background: #fff; padding: 32px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+  .contact-card .name { font-size: 20px; font-weight: 600; }
+  .contact-card .btn { margin-top: 12px; align-self: flex-start; }
+
+  .foot { padding: 48px 56px 36px; display: flex; flex-direction: column; gap: 40px; color: #a8a196; }
+  .foot a { color: #a8a196; }
+  .foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; }
+  .foot-logo { width: 170px; height: auto; }
+  .foot-cols { display: flex; flex-wrap: wrap; gap: 64px; font-size: 14px; }
+  .foot-cols > div { display: flex; flex-direction: column; gap: 10px; }
+  .foot-cols .label { color: #f4efe7; opacity: 1; }
+  .foot-big { font-size: clamp(2.4rem, 7vw, 6.4rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: #262626; }
+  .foot-bottom { border-top: 1px solid #262626; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 12px; }
+
+  @media (max-width: 1000px) {
+    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .story, .why, .contact { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 760px) {
+    .card { padding: 32px 20px; }
+    .hide-sm { display: none !important; }
+    .nav { padding: 18px; }
+    .logo { height: 42px; }
+    .nav nav { padding: 0; border: 0; background: none; }
+    .hero { min-height: 680px; }
+    .hero-body { padding: 24px 20px 32px; }
+    .lede { font-size: 17px; }
+    .strip { padding: 22px 20px; }
+    .split, .steps { grid-template-columns: 1fr; }
+    .ticks { grid-template-columns: 1fr; }
+    .side { padding: 0; }
+    .side img { height: 220px; }
+    .strip { justify-content: flex-start; gap: 10px 18px; }
+    .strip [aria-hidden] { display: none; }
+    .side-body { padding: 28px 20px; }
+    .event { min-height: 560px; }
+    .event-shade { background: linear-gradient(180deg, rgba(11,11,11,0.2) 0%, rgba(11,11,11,0.92) 60%); }
+    .event-body { padding: 28px 20px; }
+    .why img { height: 240px; }
+    blockquote { padding: 22px 20px; }
+    .foot { padding: 32px 20px 24px; }
+    .foot-cols { gap: 28px; }
+  }
+</style>

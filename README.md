@@ -12,7 +12,7 @@ npm run build    # outputs to dist/
 
 ## Edit content
 
-Page markup lives in `src/content/summit.html` (exported from the "Udaipur Investor Summit" design in Claude); images are in `public/images/`.
+Home page (Aravali Ventures) is `src/pages/index.astro`. The Udaipur Investor Summit page is `src/pages/udaipur-investor-summit.astro`, with its markup in `src/content/summit.html` (exported from the summit design in Claude). Images are in `public/images/`.
 Global styles, phone-width overrides and SEO tags are in `src/layouts/Base.astro`; the Founders/Investors/Partners toggle and the invitation form (opens an email to contact@aravali.ventures) are scripted in `src/pages/index.astro`.
 
 ## Deploy

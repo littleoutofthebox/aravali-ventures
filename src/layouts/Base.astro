@@ -2,13 +2,15 @@
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 const {
-  title = 'Udaipur Investor Summit · Aravali Ventures',
-  description = 'Udaipur Investor Summit by Aravali Ventures. Innovation meets investment: one evening where founders meet the investors who can back them. 19 November 2026, Holymont Resort, Udaipur.',
+  title = 'Aravali Ventures · Connecting business leaders with India\'s next founders',
+  description = 'Aravali Ventures connects established entrepreneurs, business families and investors in Rajasthan and India\'s emerging cities with promising early-stage startups, and gives them a structured way to evaluate and support them.',
+  image = '/images/092749b22adb654b1872344154eee48c.jpg',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL('/images/4e49ac4d5af10c709084df905cc2e0b8.jpg', Astro.site);
+const ogImage = new URL(image, Astro.site);
 ---
 
 <!doctype html>
