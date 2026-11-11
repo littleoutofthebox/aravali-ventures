@@ -12,26 +12,26 @@ const img = {
 };
 
 const highlights = [
-  { k: 'Top HNIs', t: 'Leading investors and business families', d: 'Leading business families, industrialists and high-net-worth investors from Udaipur, Jaipur, Jodhpur, Kota and beyond.' },
+  { k: 'Top HNIs', t: 'Business families, promoters and industrialists', d: 'Leading business families, promoters, industrialists and private investors from Udaipur, Jaipur, Jodhpur, Kota and beyond.' },
   { k: '1 question', t: 'Which startup to invest in', d: 'The whole evening is built around one question that matters: which startup to invest in, and why.' },
   { k: '6 startups', t: 'Curated, from six domains', d: 'Six screened startups from different sectors showcase live, each evaluated in the room.' },
   { k: 'Insight', t: 'Startup investing, made clear', d: 'Candid perspectives from experienced investors and experts on what to look for, what to ask and how to start small and safely.' },
 ];
 
 const framework = [
-  { n: '01', t: 'The founder', d: 'Commitment, capability and integrity. The people behind the pitch.' },
-  { n: '02', t: 'The problem and market', d: 'Is the problem real, is the market large enough, and why now?' },
-  { n: '03', t: 'The business model', d: 'How the company makes money, and whether the unit economics can work at scale.' },
-  { n: '04', t: 'Traction and financials', d: 'Reading early numbers honestly, and separating real progress from a good story.' },
-  { n: '05', t: 'Valuation and terms', d: 'What a fair price looks like, and the terms that protect an early investor.' },
-  { n: '06', t: 'Legal and risk', d: 'Due diligence, documentation and the red flags to check before you sign.' },
+  { n: '01', t: 'The founder', q: 'Founder-market fit', d: 'Do they have the domain depth, execution speed and integrity to build this?' },
+  { n: '02', t: 'The problem and market', q: 'Market depth', d: 'Is this a painful, recurring problem, in a market large enough to matter?' },
+  { n: '03', t: 'The business model', q: 'Unit economics', d: 'How does the company make money, and do margins strengthen as it scales?' },
+  { n: '04', t: 'Traction and financials', q: 'Signal versus noise', d: 'Are customers actually paying and staying, or is early growth being bought?' },
+  { n: '05', t: 'Valuation and terms', q: 'Deal pricing', d: 'Is the entry valuation grounded in reality, and do the terms protect early investors?' },
+  { n: '06', t: 'Legal and risk', q: 'Governance and red flags', d: 'Are the cap table, IP ownership and regulatory compliance clean before you sign?' },
 ];
 
 const investorPoints = [
   'A clear lens on what separates a strong startup from a strong pitch',
   'Six screened startups, with structured profiles shared in advance',
   'Live expert evaluation of each pitch: what to ask and what to watch',
-  'Legal and financial guidance if you choose to invest',
+  'If you choose to invest: due diligence, term-sheet structuring and documentation support',
 ];
 
 const startupPoints = [
@@ -80,8 +80,9 @@ const expertise = [
           <span class="badge"><span class="dot"></span>By invitation only · Hosted by Aravali Ventures</span>
           <h1>Udaipur Investor Summit</h1>
           <p class="lede">
-            An evening for top HNIs and business families to exchange perspectives with peers and experts on
-            startup investing, and to meet six curated startups from six different domains.
+            An intimate, by-invitation evening for top HNIs, business families and industrialists to exchange
+            perspectives on startup investing, and to see six curated startups from six different domains
+            evaluated live by legal, financial and industry experts.
           </p>
           <div class="ctas">
             <a href="#invite" class="btn red">Request invitation <span aria-hidden="true">→</span></a>
@@ -122,8 +123,9 @@ const expertise = [
         </p>
         <p>
           Some have tried, through startup networks, incubators and pitch events. Too often those
-          investments struggle or stall, and the investor returns to the businesses he already knows. The
-          problem is rarely a lack of capital. It is the lack of a reliable way to answer one question:
+          early bets struggle or stall, and investors return to the businesses and asset classes they
+          already know. The problem is rarely a lack of capital. It is the lack of structured diligence, and
+          of a reliable way to answer one question:
         </p>
         <blockquote>“How do I identify the right founder, the right business and the right opportunity before I invest?”</blockquote>
         <p class="sign">The Udaipur Investor Summit exists to answer it.</p>
@@ -133,6 +135,7 @@ const expertise = [
     <section class="card dark" id="learn">
       <div class="head-row">
         <div>
+          <span class="eyebrow">02 · What matters</span>
           <h2>Which startup to invest in, and why.</h2>
         </div>
         <p class="aside">The six questions experienced investors ask before backing a company, discussed with industry, legal and financial experts and applied live to every startup on stage.</p>
@@ -143,6 +146,7 @@ const expertise = [
             <article class="step">
               <span class="num">{s.n}</span>
               <h3>{s.t}</h3>
+              <span class="step-q">{s.q}</span>
               <p>{s.d}</p>
             </article>
           ))
@@ -153,7 +157,7 @@ const expertise = [
     <section class="card red-card six-card" id="startups-six">
       <div class="head-row">
         <div>
-          <span class="eyebrow eb-light">02 · The showcase</span>
+          <span class="eyebrow eb-light">03 · The showcase</span>
           <h2>Six startups. Six domains. Evaluated live.</h2>
         </div>
         <p class="aside light">
@@ -175,7 +179,7 @@ const expertise = [
     </section>
 
     <section class="card cream principles-card">
-      <span class="eyebrow eb-dark">03 · What makes it different</span>
+      <span class="eyebrow eb-dark">04 · What makes it different</span>
       <div class="principles">
         {
           different.map((p) => (
@@ -208,7 +212,7 @@ const expertise = [
     <section class="card dark" id="host">
       <div class="head-row">
         <div>
-          <span class="eyebrow">05 · Hosted by Aravali Ventures</span>
+          <span class="eyebrow">06 · Hosted by Aravali Ventures</span>
           <h2>Expertise across every side of a deal.</h2>
         </div>
         <p class="aside">
@@ -237,7 +241,7 @@ const expertise = [
         <img src={img.logo} alt="Aravali Ventures" class="foot-logo" />
         <div class="foot-cols">
           <div><span class="label">The Summit</span><span>19 November 2026</span><span>4:00 PM onwards</span><span>Holymont Resort, Udaipur</span></div>
-          <div><span class="label">Contact</span><span>Aravali Ventures</span><a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a><a href="tel:+918696940199">+91 86969 40199</a></div>
+          <div><span class="label">Contact</span><span>Aravali Ventures</span><a href="mailto:contact@aravali.ventures">contact@aravali.ventures</a><a href="https://wa.me/918696940199?text=Hi%20Aravali%20Ventures%20team%2C%20I%20would%20like%20to%20request%20an%20invitation%20to%20the%20Udaipur%20Investor%20Summit." target="_blank" rel="noopener">WhatsApp +91 86969 40199</a></div>
         </div>
       </div>
       <div class="foot-big">Invest with knowledge</div>
@@ -270,7 +274,7 @@ const expertise = [
   const form = document.getElementById('invite-form') as HTMLFormElement | null;
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const active = document.querySelector<HTMLButtonElement>('.aud-seg[aria-pressed="true"]')?.dataset.aud ?? 'F';
+    const active = document.querySelector<HTMLButtonElement>('.aud-seg[aria-pressed="true"]')?.dataset.aud ?? 'I';
     const lines = [`Attending as: ${roles[active]}`];
     form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input[name], select[name]').forEach((f) => {
       if (f.closest('[hidden]')) return;
@@ -395,6 +399,7 @@ const expertise = [
   .step { border-radius: 22px; background: #0b0b0b; border: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; gap: 14px; }
   .step .num { align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: #c8242a; color: #fff; font-size: 12px; font-weight: 700; }
   .step p { font-size: 15px; color: #a8a196; }
+  .step-q { margin-top: -6px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #e0474b; }
 
   .who { display: flex; flex-direction: column; gap: 20px; }
   .who h3 { font-size: clamp(1.6rem, 2.6vw, 2.4rem); }

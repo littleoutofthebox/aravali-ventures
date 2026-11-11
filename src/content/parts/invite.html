@@ -1,7 +1,7 @@
 <section id="invite" style="border-radius: 28px; background: #161616; border: 1px solid #262626; padding: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 56px">
     <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
       <div style="display: flex; flex-direction: column; gap: 20px">
-        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #E0474B">07 · Request Invitation</span>
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #E0474B">08 · Request Invitation</span>
         <h2 style="margin: 0; font-size: clamp(2rem, 3.4vw, 3.2rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.025em">Seats are limited. Six showcase slots. Every request is reviewed.</h2>
         <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #CFC7BA">Tell us who you are and how you would like to take part. Every request is reviewed by our team, and confirmed guests receive a personal invitation and entry pass.</p>
       </div>
@@ -9,15 +9,16 @@
         <span style="font-size: 12px; color: #A8A196">Contact</span>
         <span style="font-size: 18px; font-weight: 600">Aravali Ventures team</span>
         <a href="mailto:contact@aravali.ventures" style="color: #F4EFE7">contact@aravali.ventures</a>
-        <a href="tel:+918696940199" style="color: #F4EFE7">+91 86969 40199</a>
+        <a href="https://wa.me/918696940199?text=Hi%20Aravali%20Ventures%20team%2C%20I%20would%20like%20to%20request%20an%20invitation%20to%20the%20Udaipur%20Investor%20Summit." target="_blank" rel="noopener" style="color: #F4EFE7">WhatsApp +91 86969 40199</a>
+        <a href="tel:+918696940199" style="color: #A8A196; font-size: 13px">or call +91 86969 40199</a>
       </div>
     </div>
     <form id="invite-form" style="border-radius: 22px; background: #F4EFE7; color: #0B0B0B; padding: 36px; display: flex; flex-direction: column; gap: 20px">
       <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
         <legend style="font-size: 13px; font-weight: 600; padding: 0; margin-bottom: 10px">I am attending as</legend>
         <div style="display: flex; flex-wrap: wrap; gap: 4px; padding: 5px; border-radius: 999px; background: #E6DFD3">
-          <button type="button" aria-pressed="true" class="aud-seg" data-aud="F">Startup</button>
-          <button type="button" aria-pressed="false" class="aud-seg" data-aud="I">Investor</button>
+          <button type="button" aria-pressed="true" class="aud-seg" data-aud="I">Investor</button>
+          <button type="button" aria-pressed="false" class="aud-seg" data-aud="F">Startup</button>
           <button type="button" aria-pressed="false" class="aud-seg" data-aud="P">Partner</button>
         </div>
       </fieldset>
@@ -27,23 +28,24 @@
         <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Email<input name="Email" type="email" autocomplete="email" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
         <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Phone / WhatsApp<input name="Phone / WhatsApp" type="tel" autocomplete="tel" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
       </div>
-      <div class="aud-pane" data-aud-show="F">
+      <div class="aud-pane" data-aud-show="F" hidden>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
           <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Sector<input name="Sector" type="text" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
           <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Stage<select name="Stage" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 12px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"><option>Pre-seed</option><option>Seed</option><option>Pre-Series A</option><option>Series A and beyond</option></select></label>
           <label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Pitch deck link<input name="Pitch deck link" type="url" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
         </div>
       </div>
-      <div class="aud-pane" data-aud-show="I" hidden>
+      <div class="aud-pane" data-aud-show="I">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
-          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Investor type<select name="Investor type" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 12px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"><option>Angel investor</option><option>Family office</option><option>Venture capital fund</option><option>Corporate venture</option></select></label>
-          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Sectors of interest<input name="Sectors of interest" type="text" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
+          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Investor type<select name="Investor type" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 12px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"><option>Business owner / industrialist</option><option>Angel investor</option><option>Family office</option><option>Venture capital / institutional fund</option><option>Corporate venture</option></select></label>
+          <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Typical ticket size<select name="Typical ticket size" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 12px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"><option>₹5 – 10 lakh</option><option>₹10 – 25 lakh</option><option>₹25 lakh and above</option><option>Still exploring</option></select></label>
+          <label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">Sectors of interest<input name="Sectors of interest" type="text" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
         </div>
       </div>
       <div class="aud-pane" data-aud-show="P" hidden>
         <label style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 600; color: #4A453F">How would you like to be involved?<input name="How would you like to be involved?" type="text" style="min-height: 50px; border: 1px solid #D6CEC1; border-radius: 14px; padding: 0 16px; font: 400 15px 'Montserrat', sans-serif; background: #FFFFFF; color: #0B0B0B"></label>
       </div>
-      <button type="submit" style="margin-top: 4px; background: #C8242A; color: #FFFFFF; border: 0; border-radius: 999px; min-height: 56px; font: 600 15px 'Montserrat', sans-serif; cursor: pointer"><span class="aud-pane" data-aud-show="F">Apply to Pitch</span><span class="aud-pane" data-aud-show="I" hidden>Request a Seat</span><span class="aud-pane" data-aud-show="P" hidden>Request an Invitation</span> →</button>
-      <p style="margin: 0; font-size: 12px; line-height: 1.6; color: #6B645A">Your details are used only to review your request for this event.</p>
+      <button type="submit" style="margin-top: 4px; background: #C8242A; color: #FFFFFF; border: 0; border-radius: 999px; min-height: 56px; font: 600 15px 'Montserrat', sans-serif; cursor: pointer"><span class="aud-pane" data-aud-show="F" hidden>Apply to Pitch</span><span class="aud-pane" data-aud-show="I">Request a Seat</span><span class="aud-pane" data-aud-show="P" hidden>Request an Invitation</span> →</button>
+      <p style="margin: 0; font-size: 12px; line-height: 1.6; color: #6B645A">Your details are used only to review your request for this event. Confirmed guests receive a personal invitation by WhatsApp and email.</p>
     </form>
   </section>
